@@ -1,7 +1,6 @@
 import React, { useState, useTransition, Suspense } from "react";
 import { fetchProfileData } from "../../utils/fakeApi";
 const initialResource = fetchProfileData(0);
-const SUSPENSE_CONFIG = { timeoutMs: 2000 };
 const Transition: React.VFC = (_) => {
   const [resource, setResource] = useState(initialResource);
   const [isPending, startTransition] = useTransition();
